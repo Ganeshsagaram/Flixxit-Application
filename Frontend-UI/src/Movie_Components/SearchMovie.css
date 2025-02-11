@@ -1,0 +1,67 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+  /* height: auto; Remove full viewport height */
+  min-height: 50vh; /* Set a reasonable height */
+  padding: 40px 20px; /* Add padding for spacing */
+  background-color: #0b0b0b;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search .MuiOutlinedInput-root {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 6px;
+}
+
+.search .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+}
+
+.search .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: red;
+}
+
+.search .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: red;
+}
+
+.search input {
+  color: white !important;
+}
+
+.search label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search .MuiInputBase-root {
+  width: 100%;
+}
+
+.search button:hover {
+  background-color: #242836;
+  transform: scale(1.05);
+}
+
+.search button:active {
+  background-color: #555;
+}
+

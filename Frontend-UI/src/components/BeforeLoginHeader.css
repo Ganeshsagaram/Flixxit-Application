@@ -1,0 +1,128 @@
+/* Basic Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+ 
+  .header .logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .navbar-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-profile .profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .navbar-profile .dropdown {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-content {
+    margin-top: 80px; /* Ensure content doesn't overlap the fixed header */
+    padding: 20px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+      color: white;
+    }
+  
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      background-color: #222;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 100;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 15px 0;
+    }
+  
+    .navbar-profile {
+      display: none;
+    }
+  }
+  
+  /* Tablet Styles (optional) */
+  @media (max-width: 1024px) {
+    .header {
+      padding: 10px 30px;
+    }
+  
+    .nav-links li {
+      margin-right: 15px;
+    }
+  
+    .navbar-profile {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .header-instruction {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 10px;
+    border-radius: 5px;
+  }

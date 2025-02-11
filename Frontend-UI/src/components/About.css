@@ -1,0 +1,98 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+  padding: 5vw 4vw; /* Adjust padding dynamically */
+  min-height: 100vh; /* Ensure it fills the full screen */
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.about-header {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 3vw; /* Adjust padding dynamically */
+  border-radius: 10px;
+  margin-bottom: 5vh; /* Use relative spacing */
+  width: 90%;
+  max-width: 700px;
+}
+
+.about-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+}
+
+.about-content {
+  max-width: 90%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 2vw;
+}
+
+.about-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-content ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.about-content ul li strong {
+  color: #007bff;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) {
+  .about-header {
+      width: 95%;
+  }
+
+  .about-header h1 {
+      font-size: 2rem;
+  }
+
+  .about-content {
+      font-size: 1rem;
+      width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header {
+      width: 100%;
+      padding: 5vw;
+  }
+
+  .about-header h1 {
+      font-size: 1.8rem;
+  }
+
+  .about-content {
+      font-size: 1rem;
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+      font-size: 1.5rem;
+  }
+
+  .about-header p {
+      font-size: 1rem;
+  }
+
+  .about-content {
+      font-size: 0.9rem;
+  }
+}

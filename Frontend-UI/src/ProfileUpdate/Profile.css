@@ -1,0 +1,40 @@
+.profile-container {
+  max-width: 300px; /* Reduced width */
+  margin: 50px auto; /* Added top and bottom margin for better positioning */
+  padding: 15px; /* Slightly reduced padding */
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: white;
+}
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+.profile-form label {
+    font-size: 1.1rem;
+  }
+  
+.profile-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+.message {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  

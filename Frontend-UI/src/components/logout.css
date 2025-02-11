@@ -1,0 +1,132 @@
+/* Navbar profile container */
+/* .navbar-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+  }
+   */
+  /* Profile image */
+  /* .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  } */
+  
+  /* .navbar-profile:hover .profile {
+    transform: scale(1.1);
+  }
+   */
+  /* Dropdown container */
+  /* .dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #141414; 
+    color: white;
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 0;
+    z-index: 1000;
+  } */
+  
+  /* Show dropdown on hover */
+  /* .navbar-profile:hover .dropdown {
+    display: flex;
+  } */
+  
+  /* Dropdown text */
+  /* .dropdown Button {
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+  } */
+/*   
+  .dropdown p:hover {
+    background-color: #333; 
+  }
+   */
+
+
+.navbar-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+}
+
+/* Profile image */
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-profile:hover .profile {
+    transform: scale(1.1);
+}
+
+/* Dropdown container */
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #141414; /* Netflix Dark Background */
+    color: white;
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Display dropdown on click instead of hover */
+.navbar-profile.active .dropdown {
+    display: flex;
+}
+
+/* Dropdown button */
+.dropdown Button {
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.dropdown Button:hover {
+    background-color: #333; /* Dark hover effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dropdown {
+        top: 45px;
+        right: 5px;
+        width: 160px;
+    }
+    .profile {
+        width: 35px;
+        height: 35px;
+    }
+}

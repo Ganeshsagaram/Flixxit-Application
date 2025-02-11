@@ -1,0 +1,223 @@
+.movie {
+    width: 90%; /* Reduced width for better layout */
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the movie container */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie__intro {
+    width: 50%; /* Let it take full width of the movie container */
+}
+
+.movie__backdrop {
+    width: 30px; /* Responsive width */
+    max-height: 200px; /* Reduce height */
+    object-fit: cover;
+    object-position: 0 35%;
+    border-radius: 10px; /* Rounded corners for aesthetics */
+}
+
+.movie__detail {
+    align-items: center;
+    width: 90%; /* Adjusted width for better responsiveness */
+    max-width: 1000px;
+    display: flex;
+    position: relative;
+    bottom: 200px; /* Adjusted bottom positioning */
+    flex-wrap: wrap; /* Ensure content wraps for smaller screens */
+}
+
+.movie__detailLeft {
+    margin-right: 20px; /* Reduced spacing */
+}
+
+.movie__poster {
+    width: 120px; /* Slightly larger for visibility */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 15px 25px;
+}
+
+.movie__detailRight {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Let it adapt to content height */
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.movie__detailRightTop > div {
+    text-shadow: 0px 0px 5px #000000;
+    margin-bottom: 0.5rem;
+}
+
+.movie__name {
+    font-weight: 600;
+    font-size: 2rem; /* Adjust font size */
+    text-align: center; /* Center-align for better readability */
+}
+
+.movie__voteCount {
+    margin-left: 1rem;
+}
+
+.movie__genres {
+    margin: 1rem 0;
+}
+
+.movie__genre {
+    padding: 0.3rem 0.7rem; /* Adjusted padding */
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-right: 0.5rem;
+}
+
+.movie__detailRightBottom {
+    margin: 1.5rem 0;
+    flex: 0.8;
+}
+
+.synopsisText {
+    font-size: 1.2rem; /* Reduced font size */
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.synopsisText > div:last-of-type {
+    margin-left: auto;
+}
+
+.movie__links {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Take full width of parent */
+    max-width: 800px; /* Restrict max width */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 1rem; /* Add space between links */
+}
+
+.movie__heading {
+    font-size: 1.8rem; /* Adjusted font size */
+}
+
+.movie__Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1.5rem; /* Adjusted padding */
+    border-radius: 15px;
+    cursor: pointer;
+    width: auto; /* Allow button width to adjust */
+    color: black;
+    font-weight: bold;
+}
+
+.movie__homeButton {
+    background-color: rgb(255, 0, 0);
+}
+
+.movie__imdbButton {
+    background-color: #f3ce13;
+}
+
+.newTab {
+    margin-left: 1rem;
+}
+
+.movie__production {
+    width: 90%; /* Adjusted width */
+    max-width: 1000px; /* Restrict max width */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 3rem; /* Adjust spacing */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 1rem;
+}
+
+.movie__productionComapany {
+    width: 150px; /* Adjust width for responsiveness */
+    margin: 1rem;
+}
+
+.productionCompanyImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie__ratingButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.movie__reviewSection {
+    margin-top: 20px;
+    padding: 20px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
+}
+
+.movie__reviewSection h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.reviewInput {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    resize: vertical;
+    background: #2b2b2b;
+    color: #fff;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.reviewInput::placeholder {
+    color: #bbb;
+}
+
+.submitReviewButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ffcc00;
+    color: #1c1c1c;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submitReviewButton:hover {
+    background: #e6b800;
+}
+
+.reviewMessage {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #0f0;
+}
+
+
+
+

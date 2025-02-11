@@ -1,0 +1,72 @@
+import React from "react";
+import "./Header.css";
+
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="logo">
+        <h1>MovieApp</h1>
+      </div>
+      <nav className="nav-links">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/popular">popular</a></li>
+          <li><a href="/top_rated">Rated</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+      <div className="auth-buttons">
+        <button className="login-btn">Login</button>
+        <button className="signup-btn">Sign Up</button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  .auth-buttons button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .auth-buttons button:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+  }
+  
+  .auth-buttons .signup-btn {
+    background-color: #007bff;
+  }
+  
+  .auth-buttons .signup-btn:hover {
+    background-color: #0056b3;
+  }

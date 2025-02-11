@@ -1,0 +1,15 @@
+.parent-element:hover 
+.hidden-element {
+    display: block; /* Ensure it's visible on hover */
+    background-color: red;
+    color: white; /* Change to white to contrast with red background */
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: max-content;
+}
+
+.hidden-element {
+    display: none; /* Initially hidden */
+}
+
