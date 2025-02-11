@@ -5,15 +5,13 @@ import {Button} from '@mui/material';
 import { DisplayMovie} from './DisplayMovie';
 import Cards from '../Cards/Card';
 import "./SearchMovie.css"
-// import './querymovie.css'
-// import dotenv from 'dotenv';
-// dotenv.config();
+
 const optionsHeader={
     method: 'GET',
     headers: {
       accept: 'application/json',
-    //Authorization:process.env.BEARER_TOKEN
-    Authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTljMzFmZGI1YWRiNmI5YWRmODc4N2ZmYmM2N2M3NyIsIm5iZiI6MTcyODQ5MDAxNC44MjcwMDAxLCJzdWIiOiI2NzA2YWExZTdlM2NlZTdkM2Y5Y2Y1MTQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Ol874qbfuaMMLcRXoAFHQmnCzYscMWt26c-CWH5jPtU"
+    Authorization:process.env.REACT_APP_BEARER_TOKEN
+    //Authorization:"Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTljMzFmZGI1YWRiNmI5YWRmODc4N2ZmYmM2N2M3NyIsIm5iZiI6MTcyODQ5MDAxNC44MjcwMDAxLCJzdWIiOiI2NzA2YWExZTdlM2NlZTdkM2Y5Y2Y1MTQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Ol874qbfuaMMLcRXoAFHQmnCzYscMWt26c-CWH5jPtU"
   
   }
 }
