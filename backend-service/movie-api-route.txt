@@ -1,0 +1,30 @@
+app.post("/add-to-my-list",async(req,res)=>{
+    const connection=await dbConnection();
+    const {movieName,date,rating}=req.body;
+    const obj={
+        movie:"",
+        release_date:"",
+        My_rating:""
+    }
+    if(movieName&&date&&rating){
+        obj.movie=movieName;
+        obj.release_date=date;
+        obj.My_rating=rating;
+        const movieExists=await connection.db("My_movies").collection("movies_list").findOne({movie:movieName});
+        if(movieExists){
+            console.log("movie exists")
+            return res.send(`This movie ${movieName} already exists in your movie list`)
+        }
+        try{
+            const insertTheDoc=await connection.db("My_Movies").collection("movie_list").insertOne(obj);
+        console.log(insertTheDoc)
+        res.send(`data has been received successfully`);
+        }catch(err){
+            console.log(err);
+            res.send("Error", err);
+        }
+        
+    }else{
+        res.send("send proper data")
+    }
+})
