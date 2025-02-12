@@ -1,5 +1,3 @@
-
-
 import validator from 'express-validator'
 const bodyValidator=validator.body;
 
