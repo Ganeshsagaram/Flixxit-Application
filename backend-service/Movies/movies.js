@@ -13,8 +13,9 @@ Moviesapi.post("/add-to-my-list", async (req, res) => {
     try {
       const connection = await dbConnection();
       const { id,movieName, date, rating, poster, content } = req.body;
-  
+      console.log(req.body)
       if (!movieName || !date || !rating||!poster||!content||!id) {
+        
         return res.status(400).send("Please provide all required movie details.");
       }
   

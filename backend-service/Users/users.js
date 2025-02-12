@@ -43,6 +43,24 @@ const postUserValidation = [
         .withMessage("Password should be 8-100 letters long"),
 ];
 
+const passwordUpdate=[
+    bodyValidator("email")
+        .isString()
+        .withMessage("Should be a string")
+        .notEmpty()
+        .withMessage("Required")
+        .isEmail()
+        .withMessage("Invalid email format"),
+
+    bodyValidator("password")
+        .isString()
+        .withMessage("Should be a string")
+        .notEmpty()
+        .withMessage("Required")
+        .isLength({ min: 8, max: 100 })
+        .withMessage("Password should be 8-100 letters long")
+]
+
 
 
 Usersapi.get("/get-users",async(req,res)=>{
@@ -236,6 +254,55 @@ Usersapi.patch("/update-user", async (req, res) => {
         }
     });
 });
+
+
+Usersapi.patch("/update-password",passwordUpdate,async(req,res)=>{
+    const connection=await dbConnection();
+    
+    let errors=validator.validationResult(req);
+
+    if(errors.isEmpty()){
+            
+                
+        const userCheck=await connection.db("userDB").collection("users").find({
+         email:{
+             $regex:req.body.email,
+             $options:'i'
+         }
+        }).toArray();
+        if(!userCheck){
+         res.status(400).json({message:"user doesn't exists with the email"});
+         return;
+        }
+        else{
+         const encryptedPassword = bcrypt.hashSync(req.body.password,10);
+         const obj={
+             ...req.body,
+             passwordHashed:encryptedPassword
+         }
+         
+         const updateResult=await connection.db("userDB").collection("users").updateOne({
+            email:req.body.email
+         },{
+            $set:{
+                password:req.body.password,
+                passwordHashed:encryptedPassword
+            }
+           
+         });
+         if (updateResult.modifiedCount === 0) {
+            return res.status(500).json({ message: "Password update failed" });
+        }
+         
+         res.send("Password updated successfully");
+         return;
+        }
+     }
+ else{
+    // console.log(errors.array())
+res.status(422).send("error in updating password")
+}
+})
 
 
 

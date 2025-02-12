@@ -100,6 +100,11 @@ export default function Login({ onLogin }) {
                     }
                 </Box>
                 <Box padding={2}>
+                <Typography variant='caption'>Forgot Password?</Typography>
+                    <Link to={'/passwordupdate'}>
+                        <Button variant='text' disabled={apiLoading}>Click Here</Button>
+                    </Link>
+                    <br/>
                     <Typography variant='caption'>Don't have an account?</Typography>
                     <Link to={'/signup'}>
                         <Button variant='text' disabled={apiLoading}>SIGN UP</Button>
