@@ -24,7 +24,7 @@ export default function HeaderPage() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [userName,setUserName]=useState("")
   useEffect(() => {
-    const token = localStorage.getItem("token"); // Assuming token is stored in localStorage
+    const token = localStorage.getItem("token")||sessionStorage.getItem("token"); // Assuming token is stored in localStorage
     axios
       .get("http://localhost:5000/get-user", {
         headers: { token },
