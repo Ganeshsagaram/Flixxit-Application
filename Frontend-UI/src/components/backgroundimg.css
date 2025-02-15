@@ -1,0 +1,50 @@
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.page-content {
+    margin-top: 0; /* Removes extra spacing */
+    padding-top: 80px; /* Ensures content is below fixed header */
+    background-image: linear-gradient(rgba(35, 32, 32, 0.6), rgba(225, 220, 220, 0.6)), 
+                      url('./Background-image-flixxit.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* Responsive Image Styling */
+  .responsive-image {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    /* margin-top: 05px; */
+  }
+  
+  /* Tablet View */
+  @media (min-width: 600px) {
+    .responsive-image {
+      max-width: 400px;
+    }
+  }
+  
+  /* Laptop View */
+  @media (min-width: 900px) {
+    .responsive-image {
+      max-width: 600px;
+    }
+  }
+  
+  /* Desktop View */
+  @media (min-width: 1200px) {
+    .responsive-image {
+      max-width: 800px;
+    }
+  }
+  
+  

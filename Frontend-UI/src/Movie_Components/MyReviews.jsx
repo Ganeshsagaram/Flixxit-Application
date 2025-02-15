@@ -4,7 +4,7 @@ import "./IndividualMovie2.css";
 import { getToken } from "../Utlis/Utlis";
 import axios from "axios";
 import Rating from '@mui/material/Rating';
-
+import { Typography } from "@mui/material";
 const MyReviews = () => {
     const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,7 +15,7 @@ const MyReviews = () => {
     axios
       .get("http://localhost:5000/get-my-reviews", {
         headers: {
-          token: getToken() // Assuming the JWT token is stored in localStorage
+          token: getToken() 
         },
       })
       .then((res) => {
@@ -28,7 +28,7 @@ const MyReviews = () => {
         setMessage("Failed to fetch reviews");
         setLoading(false); // Stop loading if there's an error
       });
-  }, []); // Empty dependency array means this runs only once when the component mounts
+  }, []); 
 function handleDeleteReview(e,id){
     e.preventDefault();
     console.log(id);
@@ -54,7 +54,9 @@ function handleDeleteReview(e,id){
     return (
         <div className="myReviews">
             <h2>My Reviews</h2>
-            {reviews.length === 0 ? (
+            {loading?(
+        <Typography variant="h5">Fetching from Your List...</Typography>
+      ):reviews.length === 0 ? (
                 <p>No reviews submitted yet.</p>
             ) : (
                 <ul className="reviewsList">
@@ -69,7 +71,7 @@ function handleDeleteReview(e,id){
                             <div className="reviewText">
                                 <h4 className="reviewMovieTitle">{review.movieTitle}</h4>
                                 <p className="reviewDescription"><b>My Review:</b> {review.movieReview}</p>
-                                <Rating value={review.myRating} precision={0.5} readOnly />
+                                <Rating value={review.myRating} precision={0.5} readOnly sx={{bgcolor:"white"}}/>
                             </div>
                             <button className="deleteReviewButton" onClick={(e) => handleDeleteReview(e,review.movieId)}>
                 ❌ Delete Review

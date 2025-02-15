@@ -81,7 +81,7 @@ const UserProfileUpdate = () => {
         <input
           type="email"
           value={email}
-          readOnly/>
+          readOnly style={{background:"#454545"}}/>
         <label>Name:</label>
         <input
           type="text"
