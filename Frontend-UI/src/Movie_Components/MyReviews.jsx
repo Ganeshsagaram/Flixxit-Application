@@ -71,7 +71,7 @@ function handleDeleteReview(e,id){
                             <div className="reviewText">
                                 <h4 className="reviewMovieTitle">{review.movieTitle}</h4>
                                 <p className="reviewDescription"><b>My Review:</b> {review.movieReview}</p>
-                                <Rating value={review.myRating} precision={0.5} readOnly sx={{bgcolor:"white"}}/>
+                                <Rating value={review.myRating} precision={0.5} readOnly sx={{bgcolor:"#45484a"}}/>
                             </div>
                             <button className="deleteReviewButton" onClick={(e) => handleDeleteReview(e,review.movieId)}>
                 ❌ Delete Review

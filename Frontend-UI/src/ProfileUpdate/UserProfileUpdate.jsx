@@ -8,7 +8,7 @@ const UserProfileUpdate = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword,setConfirmPassword]=useState("")
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [email,setEmail]=useState("")
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const UserProfileUpdate = () => {
       })
       .then((res) => {setUserName(res.data.userName)
         setEmail(res.data.email);
+        setLoading(false)
       })
       .catch((err) => console.error("Error fetching user:", err));
   }, []);
@@ -80,12 +81,12 @@ const UserProfileUpdate = () => {
         <label>Email:</label>
         <input
           type="email"
-          value={email}
+          value={loading ? "Fetching..." : email}
           readOnly style={{background:"#454545"}}/>
         <label>Name:</label>
         <input
           type="text"
-          value={userName}
+          value={loading ? "Fetching..." : userName}
           onChange={(e) => setUserName(e.target.value)}
           placeholder="Enter your name"
         />

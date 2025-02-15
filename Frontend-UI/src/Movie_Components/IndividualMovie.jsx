@@ -162,7 +162,7 @@ export default function IndividualMovie() {
                             <Rating name="half-rating-read" value={value} precision={0.5} onChange={(e,val)=>{
         setValue(e.target.value);
         console.log(e.target.value);
-      }} >
+      }} sx={{ color: "gold", fontSize: "2rem",bgcolor:"#45484a" }}>
                                 
                                 </Rating> 
                             </span>

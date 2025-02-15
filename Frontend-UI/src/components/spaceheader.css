@@ -1,0 +1,18 @@
+.space-header {
+    margin-top: 70px; /* Default spacing for mobile */
+  }
+  
+  /* Tablet View (768px and above) */
+  @media (min-width: 768px) {
+    .space-header {
+      margin-top: 60px;
+    }
+  }
+  
+  /* Desktop View (1024px and above) */
+  @media (min-width: 1024px) {
+    .space-header {
+      margin-top: 100px;
+    }
+  }
+  

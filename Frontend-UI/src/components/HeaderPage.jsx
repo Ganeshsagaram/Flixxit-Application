@@ -2,7 +2,7 @@ import React, { useState, Fragment, useContext, useEffect, useRef, useActionStat
 import { Link, useNavigate } from "react-router-dom";
 import "./HeaderPage2.css";
 import { clearTokens, getToken } from "../Utlis/Utlis";
-import { Menu, Close } from "@mui/icons-material"; // Material Icons
+import { Menu, Close, Padding } from "@mui/icons-material"; // Material Icons
 import { UserContext } from "../UserContext";
 import "./logout.css";
 import caret_icon from '../assets/caret_icon.svg';
@@ -12,6 +12,7 @@ import { Button } from "@mui/material";
 import HomePage from "./HomePage";
 import axios from "axios";
 import { deepPurple } from "@mui/material/colors";
+import "./spaceheader.css"
 // // Custom Avatar Component
 // const CustomAvatar = ({ userName }) => {
 //   // console.log(userName);
@@ -19,7 +20,7 @@ import { deepPurple } from "@mui/material/colors";
 // };
 
 export default function HeaderPage() {
-  const [menuOpen, setMenuOpen] = useState(false); // Track mobile menu state
+  const [menuOpen, setMenuOpen] = useState(false); 
   
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [userName,setUserName]=useState("")
@@ -38,7 +39,7 @@ export default function HeaderPage() {
     clearTokens();
     navigate("/", { replace: true }); 
     window.location.reload();
-    setMenuOpen(false); // Close menu on logout
+    setMenuOpen(false); 
   }
 
   const handleMenuToggle = () => {
@@ -46,7 +47,7 @@ export default function HeaderPage() {
   };
 
   const closeMenu = () => {
-    setMenuOpen(false); // Close the menu when a link is clicked
+    setMenuOpen(false);
   };
 
   return (
@@ -95,9 +96,8 @@ export default function HeaderPage() {
       </header>
 
       {/* Page content wrapper (ensures space below header) */}
-      <div className={`page-content ${menuOpen ? "menu-open" : ""}`}>
-        {/* Your page content here */}
-        {/* <HomePage/> */}
+      <div className="space-header">
+       
       </div>
     </Fragment>
   );
