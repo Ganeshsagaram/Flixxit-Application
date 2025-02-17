@@ -3,7 +3,7 @@
     "builds": [
       {
        
-        "src": "backend/index.js",
+        "src": "backend-service/index.js",
         "use": "@vercel/node"
       }
     ],
@@ -11,7 +11,7 @@
     {
       
       "src": "/(.*)",
-      "dest": "books/index.js"
+      "dest": "backend-service/index.js"
     }
   ]
     
