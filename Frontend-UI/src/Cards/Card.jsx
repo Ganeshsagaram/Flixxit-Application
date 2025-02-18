@@ -20,7 +20,7 @@ const Cards = ({key,movie}) => {
     }, []) 
 function getMovieDetails(e){
     e.preventDefault();
-    axios.post("http://localhost:5000/add-to-my-list",{
+    axios.post("https://ganesh-backend-do4x.onrender.com/add-to-my-list",{
         id:movie.id,
         movieName:movie.title,
         date:movie.date,

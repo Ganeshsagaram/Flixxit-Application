@@ -25,7 +25,7 @@ const MyCards = ({key,movie}) => {
         e.preventDefault();
         console.log("Removing movie with ID:", movieId);
 
-        axios.delete(`http://localhost:5000/delete-movie/${movieId}`, {
+        axios.delete(`https://ganesh-backend-do4x.onrender.com/delete-movie/${movieId}`, {
             headers: {
                 "token": getToken()
             }

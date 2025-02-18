@@ -22,7 +22,7 @@ const PlayCards = ({ key, movie }) => {
     e.preventDefault(); // Prevent form submission
     axios
       .post(
-        "http://localhost:5000/add-to-my-list",
+        "https://ganesh-backend-do4x.onrender.com/add-to-my-list",
         {
           id: movie.id,
           movieName: movie.title,

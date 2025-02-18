@@ -31,7 +31,7 @@ export default function PasswordUpdate() {
       setApiLoading(true);
       console.log(data)
       try {
-        const response = await axios.patch("http://localhost:5000/update-password", {
+        const response = await axios.patch("https://ganesh-backend-do4x.onrender.com/update-password", {
           
           email: data.email,
           password: data.password,

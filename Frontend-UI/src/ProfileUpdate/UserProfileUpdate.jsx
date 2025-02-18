@@ -14,7 +14,7 @@ const UserProfileUpdate = () => {
   useEffect(() => {
     const token = localStorage.getItem("token")||sessionStorage.getItem("token"); // Assuming token is stored in localStorage
     axios
-      .get("http://localhost:5000/get-user", {
+      .get("https://ganesh-backend-do4x.onrender.com/get-user", {
         headers: { token },
       })
       .then((res) => {setUserName(res.data.userName)
@@ -49,7 +49,7 @@ const UserProfileUpdate = () => {
 
     axios
       .patch(
-        "http://localhost:5000/update-user",
+        "https://ganesh-backend-do4x.onrender.com/update-user",
         { userName, password },
         {
           headers: { token },

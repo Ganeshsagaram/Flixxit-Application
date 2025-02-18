@@ -19,7 +19,7 @@ export default function GetMyWatchList() {
   const fetchMovies = () => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/get-movies", {
+      .get("https://ganesh-backend-do4x.onrender.com/get-movies", {
         headers: { token: getToken() },
       })
       .then((res) => {

@@ -58,7 +58,7 @@ export default function IndividualMovie() {
     };
 
     // Send the review data to the backend using Axios
-    axios.post('http://localhost:5000/add-review', reviewData, {
+    axios.post('https://ganesh-backend-do4x.onrender.com/add-review', reviewData, {
         headers: {
             token: getToken()  // Assuming you have a method to get the token from the user
         }

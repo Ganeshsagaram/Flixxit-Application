@@ -27,7 +27,7 @@ export default function HeaderPage() {
   useEffect(() => {
     const token = localStorage.getItem("token")||sessionStorage.getItem("token"); // Assuming token is stored in localStorage
     axios
-      .get("http://localhost:5000/get-user", {
+      .get("https://ganesh-backend-do4x.onrender.com/get-user", {
         headers: { token },
       })
       .then((res) => setUserName(res.data.userName))
