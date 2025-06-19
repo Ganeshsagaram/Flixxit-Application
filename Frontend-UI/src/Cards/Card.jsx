@@ -21,7 +21,7 @@ const Cards = ({key,movie}) => {
     }, []) 
 function getMovieDetails(e){
     e.preventDefault();
-    axios.post("https://backend-service-5ktn.onrender.com/add-to-my-list",{
+    axios.post("https://backend-service-4mar.onrender.com/add-to-my-list",{
         id:movie.id,
         movieName:movie.title,
         date:movie.date,

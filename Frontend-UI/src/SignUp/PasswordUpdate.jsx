@@ -31,7 +31,7 @@ export default function PasswordUpdate() {
       setApiLoading(true);
       console.log(data)
       try {
-        const response = await axios.patch("https://backend-service-5ktn.onrender.com/update-password", {
+        const response = await axios.patch("https://backend-service-4mar.onrender.com/update-password", {
           
           email: data.email,
           password: data.password,

@@ -13,7 +13,7 @@ const MyReviews = () => {
   useEffect(() => {
     // Fetch reviews from the backend API when the component mounts
     axios
-      .get("https://backend-service-5ktn.onrender.com/get-my-reviews", {
+      .get("https://backend-service-4mar.onrender.com/get-my-reviews", {
         headers: {
           token: getToken() 
         },
@@ -33,7 +33,7 @@ function handleDeleteReview(e,id){
     e.preventDefault();
     console.log(id);
     axios
-    .delete(`https://backend-service-5ktn.onrender.com/delete-review/${id}`, {
+    .delete(`https://backend-service-4mar.onrender.com/delete-review/${id}`, {
       headers: { 
         "token":getToken()
       }

@@ -95,7 +95,7 @@ export default function LoginAlternate({ onLogin }) {
 
     function mySubmit(formData) {
         setApiLoading(true);
-        axios.get("https://backend-service-5ktn.onrender.com/generate-token", {
+        axios.get("https://backend-service-4mar.onrender.com/generate-token", {
             headers: {
                 myemail: formData.email,
                 mypassword: formData.password
