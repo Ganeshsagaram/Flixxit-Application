@@ -19,7 +19,7 @@ export default function GetMyWatchList() {
   const fetchMovies = () => {
     setLoading(true);
     axios
-      .get("http://https://backend-service-5ktn.onrender.com/get-movies", {
+      .get("https://backend-service-5ktn.onrender.com/get-movies", {
         headers: { token: getToken() },
       })
       .then((res) => {
