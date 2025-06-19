@@ -14,7 +14,7 @@ export default function Login({ onLogin }) {
 
     function mySubmit(formData) {
         setApiLoading(true);
-        axios.get("https://ganesh-backend-do4x.onrender.com/generate-token", {
+        axios.get("http://https://backend-service-5ktn.onrender.com/generate-token", {
             headers: {
                 myemail: formData.email,
                 mypassword: formData.password

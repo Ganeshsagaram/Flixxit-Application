@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, {useEffect, useState} from "react"
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
 import "../Cards/card.css"
@@ -20,7 +21,7 @@ const Cards = ({key,movie}) => {
     }, []) 
 function getMovieDetails(e){
     e.preventDefault();
-    axios.post("https://ganesh-backend-do4x.onrender.com/add-to-my-list",{
+    axios.post("http://https://backend-service-5ktn.onrender.com/add-to-my-list",{
         id:movie.id,
         movieName:movie.title,
         date:movie.date,

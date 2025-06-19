@@ -25,7 +25,7 @@ const SignUp = () => {
     setApiLoading(true);
     console.log(data)
     try {
-      const response = await axios.post("https://ganesh-backend-do4x.onrender.com/signup-user", {
+      const response = await axios.post("http://https://backend-service-5ktn.onrender.com/signup-user", {
         userName: data.username,
         email: data.email,
         password: data.password,
