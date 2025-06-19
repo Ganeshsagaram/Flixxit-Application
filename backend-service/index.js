@@ -11,11 +11,11 @@ import { AutherizeMiddleware } from '../backend-service/middleware/auth.js';
 const app=express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(cors()) 
+app.use(cors());
 app.get("/",(req,res)=>{
     res.redirect("/home");
 });
-const PORT=process.env.PORT_NUMBER||8080;
+const PORT=process.env.PORT_NUMBER||5500;
 
 app.use("/", Usersapi);
 app.use("/",AutherizeMiddleware,Moviesapi);
