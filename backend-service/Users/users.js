@@ -179,7 +179,7 @@ Usersapi.get("/generate-token",async (req,res)=>{
             userID:user._id,
             email: user.email
         },
-            process.env.SECRETE_KEY,
+           SECRETE_KEY,
             {
                 expiresIn: "1hr"
             }
@@ -198,7 +198,7 @@ Usersapi.get("/verify-token",async (req,res)=>{
 
     const token=req.headers['token'];
         if(token){
-            jwt.verify(token,process.env.SECRETE_KEY,(err,decode)=>{
+            jwt.verify(token,SECRETE_KEY,(err,decode)=>{
                 if(err){
                     return res.status(401).send(err)
                 }
@@ -223,7 +223,7 @@ Usersapi.patch("/update-user", async (req, res) => {
     }
 
    
-    jwt.verify(token, process.env.SECRETE_KEY, async (err, decoded) => {
+    jwt.verify(token, SECRETE_KEY, async (err, decoded) => {
         if (err) {
             return res.status(401).json({ message: "Invalid token." });
         }

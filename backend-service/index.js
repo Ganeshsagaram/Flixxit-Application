@@ -15,7 +15,7 @@ app.use(cors());
 app.get("/",(req,res)=>{
     res.redirect("/home");
 });
-const PORT=process.env.PORT_NUMBER||5500;
+const PORT=PORT||5500;
 
 app.use("/", Usersapi);
 app.use("/",AutherizeMiddleware,Moviesapi);
