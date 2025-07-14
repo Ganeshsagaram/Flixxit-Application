@@ -61,16 +61,7 @@ const passwordUpdate=[
 
 
 
-Usersapi.get("/get-users",async(req,res)=>{
-    const connection=await dbConnection();
-    const users=await connection.db("userDB").collection("users").find().toArray();
-    if(users.length>0){
-        res.send(users);
-    } 
-    else{
-        res.status(500).send("No users are found");
-    }
-});
+
 Usersapi.get("/get-user", async (req, res) => {
     try {
         const token = req.headers.token;
